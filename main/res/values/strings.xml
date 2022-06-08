@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">H3Bnb</string>
+    <string name="pick_end_date">date de fin</string>
+    <string name="pick_start_date">dateDebut</string>
+</resources>

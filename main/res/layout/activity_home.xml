@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="menu"
+            android:id="@+id/buttonMenu"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/home2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:text="Filters"
+            android:id="@+id/title"
+            android:gravity="center"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Pays :"
+                android:id="@+id/textCountry"
+                android:gravity="center">
+            </TextView>
+            <Spinner android:id="@+id/spinnerCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filterCountry">
+            </EditText>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Ville :"
+                android:id="@+id/textCity"
+                android:gravity="center">
+            </TextView>
+            <Spinner android:id="@+id/spinnerCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Type :"
+                android:id="@+id/textType"
+                android:gravity="center">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filterType">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Lits :"
+                android:id="@+id/textBeds"
+                android:gravity="center">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filterBeds">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Dates :"
+                android:id="@+id/textDates"
+                android:gravity="center">
+            </TextView>
+            <Button
+                android:layout_width="23mm"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_start_date"
+                android:onClick="showStartDatePickerDialog"
+                android:id="@+id/buttonDateArrivee"/>
+            <Button
+                android:layout_width="23mm"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_end_date"
+                android:onClick="showEndDatePickerDialog"
+                android:id="@+id/buttonDateDepart"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="15mm"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="Prix :"
+                android:id="@+id/textPrice"
+                android:gravity="center">
+            </TextView>
+            <EditText
+                android:layout_width="23mm"
+                android:layout_height="match_parent"
+                android:id="@+id/priceMin"
+                android:gravity="center">
+            </EditText>
+            <EditText
+                android:layout_width="23mm"
+                android:layout_height="match_parent"
+                android:id="@+id/priceMax"
+                android:gravity="center">
+            </EditText>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSearch"
+            android:text="Search"
+            android:background="@drawable/button_rond"
+            android:onClick="buttonSearchClick"
+            app:backgroundTint="#000000">
+        </Button>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
